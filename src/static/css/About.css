@@ -1,0 +1,16 @@
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	margin: 0 auto;
+	max-width: 90%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-content {
+	/* border: 1px solid white; */
+	border-width: medium;
+	border-radius: 5px;
+	padding: 30px;
+}

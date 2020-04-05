@@ -1,0 +1,9 @@
+.contact-container {
+	padding: 10px;
+	text-align: center;
+}
+
+.contact-container h4,
+.contact-container h5 {
+	text-decoration: underline;
+}

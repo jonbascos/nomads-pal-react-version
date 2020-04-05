@@ -1,0 +1,32 @@
+p {
+	margin-top: 20px;
+}
+
+li {
+	margin-top: 10px;
+}
+
+ul li {
+	color: rgb(233, 16, 233);
+}
+
+.digitalnomads-container {
+	max-width: 90%;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.7);
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.digitalnomads-content {
+	padding: 5px;
+}
+
+.steps-to-be-a-nomad {
+	margin-top: 10px;
+}
+
+.steps {
+	font-size: 1.2em;
+	color: teal;
+}

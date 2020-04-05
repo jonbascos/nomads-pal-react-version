@@ -1,0 +1,20 @@
+.nav-styling {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.nav-wrapper {
+	padding: 0 10px;
+}
+
+.nav-background {
+	background: rgba(0, 0, 0, 0);
+}
+
+.logo-text {
+	font-size: 0.7em;
+}
+
+.earthIcon {
+	margin: 0 10px;
+	color: #0ed5b4;
+}
