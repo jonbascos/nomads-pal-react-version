@@ -8,13 +8,6 @@ import Results from "./Results";
 import { db } from "./services/firebase";
 
 function Search(props) {
-	// const [search, setSearch] = useState({
-	// 	city: "",
-	// 	state: "Oregon",
-	// });
-	// const [locations, setLocations] = useState([]);
-	// const [results, setResults] = useState([]);
-
 	const history = useHistory();
 
 	// Retrieves all locations from firestore
@@ -38,6 +31,7 @@ function Search(props) {
 		M.AutoInit();
 	}, []);
 
+	// Updates state of the input fields
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		props.setSearch((prevState) => {
@@ -48,11 +42,12 @@ function Search(props) {
 		});
 	};
 
+	// Searches for matches
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		let city = props.search.city.toLowerCase();
 		let state = props.search.state.toLowerCase();
-		// setResults(search);
+
 		db.collection("locations")
 			.where("city", "==", `${city}`)
 			.where("state", "==", `${state}`)
@@ -70,7 +65,7 @@ function Search(props) {
 
 	console.log("Locations: ", props.locations);
 	console.log("Search: ", props.search);
-	console.log("Results: ", props.results);
+	console.log("Results from SearchBox: ", props.results);
 
 	return (
 		<div>
@@ -83,15 +78,19 @@ function Search(props) {
 					<form className='col s12' onSubmit={handleSubmit}>
 						<div className='row'>
 							<div className='input-field col s12'>
-								<label>City</label>
+								{/* <label>City</label> */}
 								<input
 									type='text'
 									name='city'
+									placeholder='Enter city'
 									onChange={handleChange}
 								></input>
 							</div>
 							<div className='input-field col s12'>
 								<select name='state' onChange={handleChange}>
+									<option value='' disabled selected>
+										---Select State---
+									</option>
 									<option value='Alabama' disabled>
 										Alabama
 									</option>
@@ -200,9 +199,7 @@ function Search(props) {
 									<option value='Oklahoma' disabled>
 										Oklahoma
 									</option>
-									<option value='Oregon' defaultValue>
-										Oregon
-									</option>
+									<option value='Oregon'>Oregon</option>
 									<option value='Pennsylvania' disabled>
 										Pennsylvania
 									</option>
@@ -243,7 +240,7 @@ function Search(props) {
 										Wyoming
 									</option>
 								</select>
-								<label>State</label>
+								{/* <label>State</label> */}
 							</div>
 						</div>
 						<button

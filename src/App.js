@@ -23,7 +23,7 @@ function App() {
 	// From SearchBox.js
 	const [search, setSearch] = useState({
 		city: "",
-		state: "Oregon",
+		state: "",
 	});
 	const [locations, setLocations] = useState([]);
 	const [results, setResults] = useState([]);
