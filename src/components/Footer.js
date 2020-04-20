@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
-import '../static/css/Footer.css';
-import M from 'materialize-css';
+import React, { useEffect } from "react";
+
+import M from "materialize-css";
+import "../static/css/Footer.css";
 
 function Footer(props) {
 	// Auto Initialize all of Materialize CSS
@@ -10,12 +11,13 @@ function Footer(props) {
 
 	return (
 		<div>
-			<footer className='page-footer'>
-				<div className='container'>
-					<div className='footer-copyright'>
-						<div className='container center'>
-							Copyright © 2020 MedicToDev
-						</div>
+			<footer class='page-footer'>
+				<div class='footer-copyright'>
+					<div class='container'>
+						© 2020 MedicTo.Dev
+						<a class='grey-text text-lighten-4 right' href='#!'>
+							info@nomadspal.com
+						</a>
 					</div>
 				</div>
 			</footer>

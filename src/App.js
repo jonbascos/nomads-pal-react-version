@@ -28,10 +28,12 @@ function App() {
 	const [locations, setLocations] = useState([]);
 	const [results, setResults] = useState([]);
 
-	return (
-		<main>
-			<Header />
-			<div className='main-body'>
+	return [
+		<>
+			<header>
+				<Header />
+			</header>
+			<main>
 				<Switch>
 					<Route exact path='/'>
 						<SearchBox
@@ -65,11 +67,12 @@ function App() {
 						/>
 					</Route>
 				</Switch>
-			</div>
-
-			<Footer />
-		</main>
-	);
+			</main>
+			<footer>
+				<Footer />
+			</footer>
+		</>,
+	];
 }
 
 export default App;
