@@ -31,11 +31,16 @@ const NewLocation = (props) => {
 		db.collection("locations")
 			.add({
 				name: props.inputData.locationName.toLowerCase(),
+				streetAddress: props.inputData.streetAddress.toLowerCase(),
 				city: props.inputData.city.toLowerCase(),
 				state: props.inputData.state.toLowerCase(),
+				phoneNumber: props.inputData.phoneNumber,
+				uploadSpeed: props.inputData.uploadSpeed,
+				downloadSpeed: props.inputData.downloadSpeed,
+				website: props.inputData.website,
 			})
 			.then(() => {
-				console.log("Document Successfuly Written");
+				console.log("Document Successfully Written");
 				history.push("/");
 			})
 			.catch((e) => {
@@ -57,6 +62,13 @@ const NewLocation = (props) => {
 				onChange={handleChange}
 			/>
 
+			<input
+				type='text'
+				name='streetAddress'
+				value={props.inputData.streetAddress}
+				placeholder='Street Address'
+				onChange={handleChange}
+			/>
 			{/* <label>City:</label> */}
 			<input
 				type='text'
@@ -75,6 +87,21 @@ const NewLocation = (props) => {
 				onChange={handleChange}
 			/>
 
+			<input
+				type='text'
+				name='uploadSpeed'
+				value={props.inputData.uploadSpeed}
+				placeholder='Upload Speed in Mbps'
+				onChange={handleChange}
+			/>
+
+			<input
+				type='text'
+				name='downloadSpeed'
+				value={props.inputData.downloadSpeed}
+				placeholder='Download Speed in Mbps'
+				onChange={handleChange}
+			/>
 			<button
 				className='btn waves-effect waves-light'
 				type='submit'

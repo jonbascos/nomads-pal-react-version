@@ -12,7 +12,7 @@ const Results = (props) => {
 	return (
 		<div className='results-cards-container'>
 			{results.map((result) => (
-				<div className='card small individual-cards'>
+				<div className='card small individual-cards teal lighten-4'>
 					<div className='card-image waves-effect waves-block waves-light'>
 						<img
 							className='activator'
@@ -26,17 +26,22 @@ const Results = (props) => {
 							<i className='material-icons right'>more_vert</i>
 						</span>
 						<p>
-							<a href='#'>This is a link</a>
+							<a href={`${result.website}`}>Website</a>
 						</p>
 					</div>
-					<div className='card-reveal'>
-						<span className='card-title grey-text text-darken-4'>
+					<div className='card-reveal teal'>
+						<span className='card-title black-text text-darken-4'>
 							{result.name}
 							<i className='material-icons right'>close</i>
 						</span>
-						<p>
-							Here is some more information about this product
-							that is only revealed once clicked on.
+						<p className='black-text'>
+							City: {result.city}
+							<br />
+							State: {result.state}
+							<br />
+							Upload: {result.uploadSpeed} Mbps
+							<br />
+							Download: {result.downloadSpeed} Mbps
 						</p>
 					</div>
 				</div>

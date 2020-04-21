@@ -16,8 +16,12 @@ function App() {
 	// From NewLocations.js
 	const [inputData, setInputData] = useState({
 		locationName: "",
+		streetAddress: "",
 		city: "",
 		state: "",
+		phoneNumber: "",
+		uploadSpeed: "",
+		downloadSpeed: "",
 	});
 
 	// From SearchBox.js
