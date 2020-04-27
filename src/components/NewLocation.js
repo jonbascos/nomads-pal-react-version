@@ -48,66 +48,90 @@ const NewLocation = (props) => {
 	return (
 		<form className='col s12' onSubmit={handleSubmit}>
 			<h3>Add New Location</h3>
-			<input
-				type='text'
-				name='locationName'
-				value={props.inputData.locationName}
-				placeholder='Name of Location'
-				onChange={handleChange}
-			/>
-
-			<input
-				type='text'
-				name='streetAddress'
-				value={props.inputData.streetAddress}
-				placeholder='Street Address'
-				onChange={handleChange}
-			/>
-			<input
-				type='text'
-				name='city'
-				value={props.inputData.city}
-				placeholder='City'
-				onChange={handleChange}
-			/>
-
-			<input
-				type='text'
-				name='state'
-				value={props.inputData.state}
-				placeholder='State (no abbreviations)'
-				onChange={handleChange}
-			/>
-
-			<input
-				type='text'
-				name='uploadSpeed'
-				value={props.inputData.uploadSpeed}
-				placeholder='Upload Speed in Mbps'
-				onChange={handleChange}
-			/>
-
-			<input
-				type='text'
-				name='downloadSpeed'
-				value={props.inputData.downloadSpeed}
-				placeholder='Download Speed in Mbps'
-				onChange={handleChange}
-			/>
-			<input
-				type='text'
-				name='website'
-				value={props.inputData.website}
-				placeholder='Website'
-				onChange={handleChange}
-			/>
-			<input
-				type='text'
-				name='imageUrl'
-				value={props.inputData.imageUrl}
-				placeholder='URL for image'
-				onChange={handleChange}
-			/>
+			<div className='row'>
+				<div className='input-field col s12'>
+					<input
+						type='text'
+						name='locationName'
+						value={props.inputData.locationName}
+						placeholder='Name of Location'
+						onChange={handleChange}
+					/>
+				</div>
+			</div>
+			<div className='row'>
+				<div className='input-field col s12'>
+					<input
+						type='text'
+						name='streetAddress'
+						value={props.inputData.streetAddress}
+						placeholder='Street Address'
+						onChange={handleChange}
+					/>
+				</div>
+			</div>
+			<div className='row'>
+				<div className='input-field col s6'>
+					<input
+						type='text'
+						name='city'
+						value={props.inputData.city}
+						placeholder='City'
+						onChange={handleChange}
+					/>
+				</div>
+				<div className='input-field col s6'>
+					<input
+						type='text'
+						name='state'
+						value={props.inputData.state}
+						placeholder='State (no abbreviations)'
+						onChange={handleChange}
+					/>
+				</div>
+			</div>
+			<div className='row'>
+				<div className='input-field col s6'>
+					<input
+						type='text'
+						name='uploadSpeed'
+						value={props.inputData.uploadSpeed}
+						placeholder='Upload Speed in Mbps'
+						onChange={handleChange}
+					/>
+				</div>
+				<div className='input-field col s6'>
+					<input
+						type='text'
+						name='downloadSpeed'
+						value={props.inputData.downloadSpeed}
+						placeholder='Download Speed in Mbps'
+						onChange={handleChange}
+					/>
+				</div>
+			</div>
+			<div className='row'>
+				<div className='input-field col s12'>
+					<input
+						type='text'
+						name='website'
+						value={props.inputData.website}
+						placeholder='Website'
+						onChange={handleChange}
+					/>
+				</div>
+			</div>
+			<div className='row'>
+				<div className='input-field col s12'>
+					<input
+						type='text'
+						name='imageUrl'
+						value={props.inputData.imageUrl}
+						placeholder='URL for image'
+						onChange={handleChange}
+					/>
+				</div>
+			</div>
 			<button
 				className='btn waves-effect waves-light'
 				type='submit'
