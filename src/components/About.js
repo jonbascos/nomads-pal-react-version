@@ -1,5 +1,5 @@
-import React from 'react';
-import '../static/css/About.css';
+import React from "react";
+import "../static/css/About.css";
 
 function About(props) {
 	return (
@@ -26,15 +26,20 @@ function About(props) {
 							Ability to create an account and save your favorite
 							places.
 						</li>
-						<li>Able to leave comments about the locations.</li>
+						<li>Ability to leave comments about the locations.</li>
 						<li>
 							Ability to view the average internet speeds you can
 							expect at the location.
 						</li>
+						<li>
+							Ability to enter the speeds you got at an existing
+							location.
+						</li>
+						<li>List of amenities at the location</li>
 					</ol>
 					<p>
 						If you'd like to request a feature or if you have any
-						suggestions, you can forward them to{' '}
+						suggestions, you can forward them to{" "}
 						<a href='mailto:suggestions@nomadspal.com'>
 							suggestions@nomadspal.com
 						</a>
