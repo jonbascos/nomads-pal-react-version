@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../static/css/Results.css";
 import M from "materialize-css";
+import "../static/css/Results.css";
 import nightlife from "../static/images/nightlife.jpg";
 
 const Results = (props) => {
@@ -33,10 +33,10 @@ const Results = (props) => {
 				<div>
 					Results: {results.length}
 					{results.map((result) => (
-						<div className='card small individual-cards black'>
+						<div className='card medium individual-cards black'>
 							<div className='card-image waves-effect waves-block waves-light'>
 								<img
-									className='activator'
+									className='activator location-photo'
 									src={
 										result.imageUrl
 											? `${result.imageUrl}`
@@ -46,7 +46,7 @@ const Results = (props) => {
 								/>
 							</div>
 							<div className='card-content'>
-								<span className='card-title activator white-text text-darken-4'>
+								<span className='card-title activator white-text text-darken-4 card-heading'>
 									{result.name}
 									<i className='material-icons right'>
 										more_vert
@@ -72,9 +72,9 @@ const Results = (props) => {
 									</i>
 								</span>
 								<p className='white-text'>
-									City: {result.city}
+									{result.streetAddress}
 									<br />
-									State: {result.state}
+									{result.city}, {result.state}
 									<br />
 									Upload: {result.uploadSpeed} Mbps
 									<br />
