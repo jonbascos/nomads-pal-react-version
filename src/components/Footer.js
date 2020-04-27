@@ -16,7 +16,13 @@ function Footer(props) {
 					<div className='container'>
 						© 2020 MedicTo.Dev
 						<a className='grey-text text-lighten-4 right' href='#!'>
-							info@nomadspal.com
+							<a
+								href='mailto:info@nomadspal.com'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								info@nomadspal.com
+							</a>
 						</a>
 					</div>
 				</div>
