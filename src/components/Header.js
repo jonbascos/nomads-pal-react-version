@@ -56,9 +56,11 @@ function Header(props) {
 						<li>
 							<Link to='/contact'>Contact Us</Link>
 						</li>
-						<li>
-							<Link to='/login'>Login</Link>
-						</li>
+						{/* <li>
+							<Link to='/login' disabled>
+								Login
+							</Link>
+						</li> */}
 					</ul>
 				</div>
 			</nav>
