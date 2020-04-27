@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../static/css/SearchBox.css";
 import M from "materialize-css";
 
-import Results from "./Results";
 import { db } from "./services/firebase";
 
 function Search(props) {
 	const history = useHistory();
 
 	// Retrieves all locations from firestore
-	useEffect(() => {
-		console.log("db Mounted");
-		db.collection("locations")
-			.get()
-			.then((snapshot) => {
-				const allLocations = [];
-				snapshot.forEach((doc) => {
-					const data = doc.data();
-					allLocations.push(data);
-					console.log("Data: ", data);
-				});
-				props.setLocations(allLocations);
-			});
-	}, []);
+	// useEffect(() => {
+	// 	console.log("db Mounted");
+	// 	db.collection("locations")
+	// 		.get()
+	// 		.then((snapshot) => {
+	// 			const allLocations = [];
+	// 			snapshot.forEach((doc) => {
+	// 				const data = doc.data();
+	// 				allLocations.push(data);
+	// 				console.log("Data: ", data);
+	// 			});
+	// 			props.setLocations(allLocations);
+	// 		});
+	// }, []);
 
 	// Auto Initialize all of Materialize CSS
 	useEffect(() => {
@@ -63,9 +62,9 @@ function Search(props) {
 			.then(history.push("/results"));
 	};
 
-	console.log("Locations: ", props.locations);
-	console.log("Search: ", props.search);
-	console.log("Results from SearchBox: ", props.results);
+	// console.log("Locations: ", props.locations);
+	// console.log("Search: ", props.search);
+	// console.log("Results from SearchBox: ", props.results);
 
 	return (
 		<div>

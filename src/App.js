@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./static/css/App.css";
 import "materialize-css/dist/css/materialize.min.css";
+import { db } from "./components/services/firebase";
 
 import Header from "./components/Header";
 import SearchBox from "./components/SearchBox";
@@ -13,6 +14,25 @@ import Results from "./components/Results";
 import NewLocation from "./components/NewLocation";
 
 function App() {
+	const [locations, setLocations] = useState([]);
+	const [results, setResults] = useState([]);
+
+	// Retrieves all locations in the firestore DB
+	useEffect(() => {
+		console.log("db Mounted");
+		db.collection("locations")
+			.get()
+			.then((snapshot) => {
+				const allLocations = [];
+				snapshot.forEach((doc) => {
+					const data = doc.data();
+					allLocations.push(data);
+					// console.log("Data: ", data);
+				});
+				setLocations(allLocations);
+			});
+	}, []);
+
 	// From NewLocations.js
 	const [inputData, setInputData] = useState({
 		locationName: "",
@@ -22,6 +42,8 @@ function App() {
 		phoneNumber: "",
 		uploadSpeed: "",
 		downloadSpeed: "",
+		website: null,
+		imageUrl: null,
 	});
 
 	// From SearchBox.js
@@ -29,8 +51,6 @@ function App() {
 		city: "",
 		state: "",
 	});
-	const [locations, setLocations] = useState([]);
-	const [results, setResults] = useState([]);
 
 	return [
 		<>

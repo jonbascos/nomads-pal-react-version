@@ -11,11 +11,11 @@ function Footer(props) {
 
 	return (
 		<div>
-			<footer class='page-footer'>
-				<div class='footer-copyright'>
-					<div class='container'>
+			<footer className='page-footer'>
+				<div className='footer-copyright'>
+					<div className='container'>
 						© 2020 MedicTo.Dev
-						<a class='grey-text text-lighten-4 right' href='#!'>
+						<a className='grey-text text-lighten-4 right' href='#!'>
 							info@nomadspal.com
 						</a>
 					</div>

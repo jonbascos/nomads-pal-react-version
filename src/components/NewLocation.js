@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { db } from "./services/firebase";
 import M from "materialize-css";
 
 const NewLocation = (props) => {
-	// const [inputData, setInputData] = useState({
-	// 	locationName: "",
-	// 	city: "",
-	// 	state: "",
-	// });
-
 	const history = useHistory();
 
 	useEffect(() => {
@@ -38,6 +32,7 @@ const NewLocation = (props) => {
 				uploadSpeed: props.inputData.uploadSpeed,
 				downloadSpeed: props.inputData.downloadSpeed,
 				website: props.inputData.website,
+				imageUrl: props.inputData.imageUrl,
 			})
 			.then(() => {
 				console.log("Document Successfully Written");
@@ -48,12 +43,11 @@ const NewLocation = (props) => {
 			});
 	};
 
-	console.log(props.inputData);
+	console.log("inputData: ", props.inputData);
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form className='col s12' onSubmit={handleSubmit}>
 			<h3>Add New Location</h3>
-			{/* <label>Location Name:</label> */}
 			<input
 				type='text'
 				name='locationName'
@@ -69,7 +63,6 @@ const NewLocation = (props) => {
 				placeholder='Street Address'
 				onChange={handleChange}
 			/>
-			{/* <label>City:</label> */}
 			<input
 				type='text'
 				name='city'
@@ -78,7 +71,6 @@ const NewLocation = (props) => {
 				onChange={handleChange}
 			/>
 
-			{/* <label>State</label> */}
 			<input
 				type='text'
 				name='state'
@@ -100,6 +92,20 @@ const NewLocation = (props) => {
 				name='downloadSpeed'
 				value={props.inputData.downloadSpeed}
 				placeholder='Download Speed in Mbps'
+				onChange={handleChange}
+			/>
+			<input
+				type='text'
+				name='website'
+				value={props.inputData.website}
+				placeholder='Website'
+				onChange={handleChange}
+			/>
+			<input
+				type='text'
+				name='imageUrl'
+				value={props.inputData.imageUrl}
+				placeholder='URL for image'
 				onChange={handleChange}
 			/>
 			<button

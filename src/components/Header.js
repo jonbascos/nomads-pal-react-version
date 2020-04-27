@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 
-import '../static/css/Header.css';
-import M from 'materialize-css';
-import logo from '../static/images/NomadsPal.png';
+import "../static/css/Header.css";
+import M from "materialize-css";
 
 function Header(props) {
 	// Auto Initialize all of Materialize CSS
