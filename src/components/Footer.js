@@ -14,7 +14,7 @@ function Footer(props) {
 			<footer className='page-footer'>
 				<div className='footer-copyright'>
 					<div className='container'>
-						© 2020 MedicTo.Dev
+						© 2020 <a href='mailto:jon@jonbascos.com'>Jon Bascos</a>
 						<a className='grey-text text-lighten-4 right' href='#!'>
 							<a
 								href='mailto:info@nomadspal.com'
@@ -25,6 +25,7 @@ function Footer(props) {
 							</a>
 						</a>
 					</div>
+					<span id='version'>v1.0</span>
 				</div>
 			</footer>
 		</div>

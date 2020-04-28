@@ -1,16 +1,23 @@
-.about-container {
+/* .about-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
-	margin: 0 auto;
+	height: 85vh;
+	margin: auto;
 	max-width: 90%;
 	background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid yellow;
+} */
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 80vw;
+	height: 100vh;
+	margin: 0 auto;
 }
 
 .about-content {
-	/* border: 1px solid white; */
-	border-width: medium;
-	border-radius: 5px;
-	padding: 30px;
+	padding: 50px;
 }

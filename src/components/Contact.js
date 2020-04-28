@@ -4,7 +4,7 @@ import "../static/css/Contact.css";
 function Contact(props) {
 	const twitter = "https://www.twitter.com/nomadspal";
 	return (
-		<div className='contact-container'>
+		<section className='contact-container'>
 			<h4>Contact Us</h4>
 			Email:{" "}
 			<a
@@ -19,7 +19,7 @@ function Contact(props) {
 			<a href={twitter} target='_blank' rel='noopener noreferrer'>
 				Twitter
 			</a>
-		</div>
+		</section>
 	);
 }
 

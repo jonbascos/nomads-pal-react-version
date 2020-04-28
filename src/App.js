@@ -53,7 +53,7 @@ function App() {
 	});
 
 	return [
-		<>
+		<section>
 			<header>
 				<Header />
 			</header>
@@ -95,7 +95,7 @@ function App() {
 			<footer>
 				<Footer />
 			</footer>
-		</>,
+		</section>,
 	];
 }
 

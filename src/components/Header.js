@@ -65,7 +65,10 @@ function Header(props) {
 				</div>
 			</nav>
 
-			<ul className='sidenav nav-background' id='mobile-demo'>
+			<ul
+				className='sidenav sidenav-close nav-background'
+				id='mobile-demo'
+			>
 				<li>
 					<Link to='/'>
 						<span className='white-text'>Home</span>
